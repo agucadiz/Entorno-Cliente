@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+    body{
+        font-size: x-large;
+    }
+    #next{
+        font-size: medium;
+    }
+    #container{
+    width: 80%;
+    margin: 0px auto;
+    background-color: aquamarine; 
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+        <h1>TEST</h1>
+        <h4>Pregunta 10</h4>
+
+        <p id="question">El trabajo principal del proceso de renderizado es convertir PHP en una página web con la que el usuario pueda interactuar.
+        </p>
+        <button onclick="isFalse()">True</button>
+        <button onclick="isTrue()">False</button>
+
+        <br><br>
+
+        <a href="./test.html" id="next">Repetir Test</a>
+
+        <script>
+        function isTrue(){
+        const parrafo=document.getElementById("question");
+        parrafo.style.color="green";
+        }
+        function isFalse(){
+        const parrafo=document.getElementById("question");
+        parrafo.style.color="red";
+        }
+        </script>
+    </div>
+</body>
+</html>

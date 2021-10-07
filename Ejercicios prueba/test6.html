@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+    body{
+        font-size: x-large;
+    }
+    #next{
+        font-size: medium;
+    }
+    #container{
+    width: 80%;
+    margin: 0px auto;
+    background-color: aquamarine; 
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+        <h1>TEST</h1>
+        <h4>Pregunta 7</h4>
+
+        <p id="question">El front-end son todas las tecnologías de diseño y desarrollo web que 
+            corren en el navegador y que se encargan de la interactividad con los usuarios.
+        </p>
+        <button onclick="isTrue()">True</button>
+        <button onclick="isFalse()">False</button>
+
+        <br><br>
+
+        <a href="./test7.html" id="next">Siguiente</a>
+
+        <script>
+        function isTrue(){
+        const parrafo=document.getElementById("question");
+        parrafo.style.color="green";
+        }
+        function isFalse(){
+        const parrafo=document.getElementById("question");
+        parrafo.style.color="red";
+        }
+        </script>
+    </div>
+</body>
+</html>
