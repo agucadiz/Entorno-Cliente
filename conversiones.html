@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversiones</title>
+</head>
+<body>
+    <h1>Actividad de Evaluación: Conversiones de tipos</h1>
+    <script>
+        const caso1 = (typeof NaN);
+        alert(`El caso (typeof NaN) devuelve: ${caso1} porque La propiedad global NaN es un valor que representa Not-A-Number.` )
+
+        const caso2 = (9999999999999999);
+        alert(`El caso (9999999999999999) devuelve: ${caso2} porque Javascript tiene 16 decimales de precisión. Si supera dicho límite, redondea.` )
+
+        const caso3 = (0.5+0.1==0.6);
+        alert(`El caso (0.5+0.1==0.6) devuelve: ${caso3} Este también tiene que ver con la precisión y la representación en coma flotante.` )
+
+        const caso4 = (0.1+0.2==0.3);
+        alert(`El caso (0.1+0.2==0.3) devuelve: ${caso4} porque JavaScript trata los decimales como números de punto flotante, lo que significa que operaciones como la suma pueden estar sujetas a errores de redondeo.` )
+
+        const caso5 = (Math.max());
+        alert(`El caso (Math.max()) devuelve: ${caso5} porque Math.max() es una función que devuelve el valor máximo y si no se le pasa ningún parámetro devuelve el valor más grande en Javascript.` )
+
+        const caso6 = (Math.min());
+        alert(`El caso (Math.min()) devuelve: ${caso6} porque Math.min() es una función que devuelve el valor minimo y si no se le pasa ningún parámetro devuelve el valor más pequeño en Javascript.` )
+
+        const caso7 = ([]+[]);
+        alert(`El caso ([] + []) devuelve: "${caso7}" porque si convertimos un Array a String, obtendremos la cadena vacía. Concatenada con otra, es la misma.`)
+
+        const caso8 = ([] + {});
+        alert(`El caso ({} + []) devuelve: ${caso8} porque crea un array de un objeto vacío` )
+
+        const caso9 = ({} + []); //En la consola sale una cosa y en el alert otra por que ?
+        alert(`El caso ({} + []) devuelve: ${caso9} porque es un bloque de código vacío, seguido de una matriz que se evalua como un número por el operador +` )
+
+        const caso10 = (true+true+true===3);
+        alert(`El caso (true+true+true===3) devuelve: ${caso10} porque cada true en booleano vale 1 en contexto numérico, sumamos 3 booleanos y nos da 3`);
+
+        const caso11 = (true-true);
+        alert(`La expresión (true-true) devuelve: ${caso11} porque el valor true vale 1 en binario y la operacion sería 1-1=0`);
+
+        const caso12 = (true==1);
+        alert(`La expresión (true==1) devuelve: ${caso12} porque ambos representan el mismo valor`);
+
+        const caso13 = (true===1);
+        alert(`La expresión (true===1) devuelve: ${caso13} porque aunque representen el mismo valor, sus tipos no son iguales true=boolean y 1=number`);
+
+        const caso14 = ((!+[]+[]+![]).length);
+        alert(`La expresión ((!+[]+[]+![]).length)) devuelve: ${caso14} porque La propiedad length de un objeto String representa la longitud de una cadena, en unidades de código UTF-16, si le pasamos caracteres actúa de mala manera`);
+
+        const caso15 = (9+"1");
+        alert(`La expresión (9+"1") devuelve: "${caso15}" por qué hay una conversión implicita por el operador + donde convierte el 9 a cadena`);
+
+        const caso16 = (91-"1");
+        alert(`La expresión (91-"1") devuelve: ${caso16} por que el operador - hace que el 1 se convierta en tipo numerico y entonces hace la resta`);
+
+        const caso17 = ([]==0);
+        alert(`La expresión ([]==0) devuelve: ${caso17} por que el valor de un array vacío es 0, por lo que si lo comparamos con el valor 0, nos dará true.`);
+    </script>
+</body>
+</html>

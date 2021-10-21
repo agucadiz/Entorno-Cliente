@@ -1,29 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script>
-    function probar(){
+    function probar() {
       const num = document.getElementById("texto");
-    
+      const cero = "not a group";
+      const uno = "solo";
+      const dos = "duet";
+      const tres = "trio";
+      const cuatro = "quartet";
+      const cincoOmas = "thes es a large group";
+      if(!isNaN(num.value)){
+        if (num.value <= 0){
+          document.getElementById("parrafo").innerHTML=cero;
+        } else if (num.value == 1){
+          document.getElementById("parrafo").innerHTML=uno;
+        } else if (num.value == 2){
+          document.getElementById("parrafo").innerHTML=dos;
+        } else if (num.value == 3){
+          document.getElementById("parrafo").innerHTML=tres;
+        } else if (num.value == 4){
+          document.getElementById("parrafo").innerHTML=cuatro;
+        } else if (num.value > 4){
+          document.getElementById("parrafo").innerHTML=cincoOmas;
+        }
+      } else {
+        alert("Debes introducir un número correcto.");
+        num.value = "";
+      }
     }
-    miImput = document.getElementById("parrafo").innerHTML 
-
   </script>
 </head>
+
 <body>
 
-  <form>
-    <label for="ncomp">Número de componentes:</label><br>
-    <input type="text" id="texto" name="ncomp"><br>
-  </form> 
+  <h1>EJERCICIO 2</h1>
 
-  <button onclick="probar()">Pulsar</button>
+  <form>
+    <label for="numero">Número de componentes:</label><br>
+    <input type="text" id="texto"><br>
+  </form>
+
+  <button type="submit" onclick="probar()">Pulsar</button>
 
   <p id="parrafo"></p>
 
 </body>
+
 </html>
