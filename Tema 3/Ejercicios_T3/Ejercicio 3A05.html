@@ -7,9 +7,15 @@
   <title>Document</title>
 </head>
 <body>
+
+  <!--
+    Ejercicio 3A05
+    Muestra los meses, días y años que tienes, haciendo uso de los métodos del objeto Date
+  -->
   
   <p id="parrafo"></p>
   <scrip>
+    <!-- 
     <script>
       const d = new Date();
       let day = d.getDate()
@@ -18,6 +24,38 @@
       let fecha = day + "/" + month + "/" + year;
       document.getElementById("parrafo").innerHTML = fecha;
       </script>
+
+      <script>
+        var hoy = new Date();
+        document.write("resultado Date = " + hoy + "<br>");
+        document.write("resultado getFullYear = " + hoy.getFullYear() + "<br>");
+        document.write("resultado getMonth = " + hoy.getMonth() + "<br>");
+        document.write("resultado getDate = " + hoy.getDate() + "<br>");
+        document.write("resultado getDay = " + hoy.getDay() + "<br>");
+        document.write("resultado getHour = " + hoy.getHours() + "<br>");
+        document.write("resultado getMinutes = " + hoy.getMinutes() + "<br>");
+        document.write("resultado toString = " + hoy.toString() + "<br>");
+      </script>
+       -->
+       <script>
+         
+        let actual = new Date();
+        let nacimiento = new Date("1982, 10, 25"); //Con comillas son los meses correctos, sin ellas un mes menos.
+    
+        let dia = Math.abs((actual.getDate() - nacimiento.getDate())); 
+        let mes = Math.abs((actual.getMonth() - nacimiento.getMonth()));
+        let anyo = (actual.getFullYear() - nacimiento.getFullYear());
+        
+        alert("Mi edad es de: " + dia + " días, " + mes + " meses y " + anyo + " años ")
+    
+      </script>
   </scrip>
+  <!-- 
+  <form>
+    <label for="frase">Introduzca una fecha:</label><br>
+    <input type="date" id="texto"><br>
+    <button type="submit" onclick="probar()">Pulsar</button>
+  </form>
+  -->
 </body>
 </html>
