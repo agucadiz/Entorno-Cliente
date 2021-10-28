@@ -76,7 +76,7 @@
         let cad2 = "";
         cad2 += "<br> El número de frames de la página es " + window.length; //window.frames.length da el mismo resultado.
         cad2 += "<br> La página actual no está insertada en un frame. frameElement devuelve: " + window.frameElement;
-        cad2 += "<br> El frame donde está incluido el iframe1 es: " + window.frames[0].frameElement.src;
+        cad2 += "<br> El frame donde está incluido el iframe1 es: " + window.frames[0].frameElement.src;//.id da su id si lo tiene.
         cad2 += "<br> El frame donde está incluido el iframe1 es: " + window.frames[1].frameElement.src;
 
         document.getElementById("ifr").innerHTML = cad2;
