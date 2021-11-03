@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO: u2e6_for2</title>
+    <script>
+        for(var j=9; j<=20; j++){
+            
+            for  (var i=0; i<60; i=i+05){
+                if(j < 10)                                // Para resolver los dos digitos en las horas
+                    document.write("0" + j + ":");
+                else
+                    document.write(j + ":");
+                
+                if(i < 10)                                // Para resolver los dos digitos en los minutos
+                    document.write("0" + i + "<br>");
+                else
+                    document.write(i + "<br>");
+            }        
+        }
+        document.write(j + ":" + "00");
+    </script>
+
+</head>
+
+<body>
+    <h1>EJERCICIO: u2e6_for2</h1>
+    <!--Crea un programa que genere un listado de horas que vayan desde las 9 hasta las 21 de 5 minutos en 5 minutos.-->
+</body>
+
+</html>

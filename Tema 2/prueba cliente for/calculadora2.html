@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <script>
+        function calcular(){
+            document.getElementById("parrafo").innerHTML = "";
+            let num = document.getElementById("num").value;
+            //let num = prompt('Introduzca un número');
+            
+            if (num == "" || isNaN(num)) {
+                document.getElementById("parrafo").innerHTML = "Datos incorrectos, escriba un número."
+            } else {
+                num = parseInt(num);
+                for (let i = 0; i <= 10; i++) {
+                    r = i * num;
+                    document.getElementById("parrafo").innerHTML += `${i} X ${num} = ${r} <br>`;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <label for="num">Introduzca un número:</label>
+    <br><br>
+    <input id="num">
+    <br><br>
+    <button onclick="calcular()">Calcular</button>
+    <br><br>
+    <p id="parrafo"></p>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>u2e2_cadenas</title>
+</head>
+<body>
+  <h1>EJERCICIO: u2e2_cadenas</h1>
+  <script>
+    /* EJERCICIO: u2e2_cadenas
+      Crea un programa en el que crees 4 variables; 2 cadenas y 2
+      números,  con los siguientes valores:
+
+      - tu nombre, tu apellido, tu edad y tu año de nacimiento.
+
+      Muestra en un alert:
+      - Una frase que incluya comillas simples.
+      - Tu nombre y apellidos separados por un salto de línea.
+      - La suma de las variables edad y año de nacimiento.
+      - La suma de todas las variables.
+
+      Comenta el código con los comentarios que estimes necesarios.
+    */
+
+    function cadenas(){
+      let nombre = 'Eduardo';
+      let ape = 'Martínez';
+      let anyoNac = 1993;
+      let edad = 27;
+
+      alert("'Comillas simples'");
+      alert(nombre + '\n' + ape);
+      alert(edad + anyoNac);
+
+      // Al compaginar numeros y cadenas, el operador "+" actua como concatenador.
+      alert(nombre + ape + anyoNac + edad);
+    }
+    cadenas();
+  </script>
+  <p><a href="../index.html">Volver</a></p>
+</body>
+</html>

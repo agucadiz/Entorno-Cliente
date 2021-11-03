@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+    <script>
+        function comprobar() {
+            let sospechoso = document.getElementById("sospechoso").value;
+            let habitacion = document.getElementById("habitacion").value;
+            let asesino = false;
+            let arma;
+
+            switch (true) {
+                case (habitacion == "el comedor" && sospechoso == "Sr. Parkes"):
+                    asesino = true;
+                    arma = "cuchillo";
+                    break;
+                case (habitacion == "la galería" && sospechoso == "Sra. Van Cleve"):
+                    asesino = true;
+                    arma = "trofeo";
+                    break;
+                case (habitacion == "la sala de billar" && sospechoso == "Sr. Sparr"):
+                    asesino = true;
+                    arma = "palo";
+                    break;
+                case (habitacion == "el salón de baile" && sospechoso == "Sr. Kalehoff"):
+                    asesino = true;
+                    arma = "veneno"
+                    break;
+                default:
+                    asesino = false;
+                    break;
+            }
+
+            if (asesino) {
+                document.getElementById("parrafo").innerHTML = sospechoso + " lo hizo en " + habitacion + " con el " + arma
+            } else {
+                document.getElementById("parrafo").innerHTML = "Vuelva a intentarlo";
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Cluedo</h1>
+
+    <label for="habitacion">Habitaciones</label>
+    <select name="habitacion" id="habitacion">
+        <option value=""></option>
+        <option value="el salón de baile">Salón de baile</option>
+        <option value="la galería">Galería</option>
+        <option value="la sala de billar">Sala de billar</option>
+        <option value="el comedor">Comedor</option>
+    </select>
+
+    <br><br>
+
+    <label for="sospechoso">Sospechosos</label>
+    <select name="sospechoso" id="sospechoso">
+        <option value=""></option>
+        <option value="Sr. Parkes">Sr. Parkes</option>
+        <option value="Sra. Van Cleve">Sra. Van Cleve</option>
+        <option value="Sr. Sparr">Sra. Sparr</option>
+        <option value="Sr. Kalehoff">Sr. Kalehoff</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="comprobar()">Comprobar</button>
+    <p id="parrafo"></p>
+
+</body>
+
+</html>

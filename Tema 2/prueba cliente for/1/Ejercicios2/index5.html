@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <label for="texto">Introduce un número:</label>
+  <input id="texto" type="text">
+  <button onclick="forClasico()">for clásico</button>
+  <button onclick="forIn()">for in</button>
+  <button onclick="forOf()">for of</button>
+  <p id="parrafo"></p>
+
+  <script>
+    function forClasico() {
+      document.getElementById("parrafo").innerHTML = "";
+      let cadena = document.getElementById("texto").value;
+      if (isNaN(cadena) || cadena >= 1000) {
+        document.getElementById("parrafo").innerHTML = "Error: Introduce un numero menor a 1000";
+      } else {
+        for (let i = 0; i < cadena.length; i++) {
+          document.getElementById("parrafo").innerHTML += cadena[i] + "<br>";
+        }
+      }
+    }
+
+    function forIn() {
+      document.getElementById("parrafo").innerHTML = "";
+      let cadena = document.getElementById("texto").value;
+      if (isNaN(cadena) || cadena >= 1000) {
+        document.getElementById("parrafo").innerHTML = "Error: Introduce un numero menor a 1000";
+      } else {
+        for (let i in cadena) {
+          document.getElementById("parrafo").innerHTML += cadena[i] + "<br>";
+        }
+      }
+    }
+
+    function forOf() {
+      document.getElementById("parrafo").innerHTML = "";
+      let cadena = document.getElementById("texto").value;
+      if (isNaN(cadena) || cadena >= 1000) {
+        document.getElementById("parrafo").innerHTML = "Error: Introduce un numero menor a 1000";
+      } else {
+        for (let i  of cadena) {
+          document.getElementById("parrafo").innerHTML += i + "<br>";
+        }
+      }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    function cluedo() {
+      ubicacion = document.getElementById("ubicacion").value;
+      sospechoso = document.getElementById("sospechoso").value;
+      salas = ['salón de baile', 'galería', 'sala de billar', 'comedor'];
+      nombres = ['Sr. Kalehoff', 'Sra. Van Cleve', 'Sra. Sparr', 'Sr. Parkes'];
+      objetos = ['veneno', 'trofeo', 'palo de billar', 'cuchillo'];
+
+      if (ubicacion == sospechoso) {
+        console.log('true!');
+        document.getElementById('resultado').innerHTML = 'Lo hizo ' + nombres[sospechoso]
+            + 'en el ' + salas[ubicacion] + ' con el ' + objetos[ubicacion] + '.';
+      } else {
+        console.log('false!');
+        document.getElementById('resultado').innerHTML = 'No se ha encontrado al asesino.';
+      }
+    }
+  </script>
+  <title>u2r3</title>
+</head>
+<body>
+  <h1>3. Cluedo</h1>
+  <div>
+    <form action="" method="get">
+      <label for="ubicacion"><h2>Indique la sala del crimen:</h2></label>
+      <select name="ubicacion" id="ubicacion">
+        <option value=""></option>
+        <option value="2">Sala de billar</option>
+        <option value="3">Comedor</option>
+        <option value="0">Salón de baile</option>
+        <option value="1">Galería</option>
+      </select>
+
+      <label for="sospechoso"><h2>Indique el sospechoso:</h2></label>
+      <select name="sospechoso" id="sospechoso" selected>
+        <option value=""></option>
+        <option value="3">Sr. Parkes</option>
+        <option value="1">Sra. Van Cleve</option>
+        <option value="0">Sr. Kalehoff</option>
+        <option value="2">Sra. Sparr</option>
+      </select>
+      <button type="button" onclick="cluedo()">Comprobar</button>
+    </form>
+  </div>
+
+  <div>
+    <h2 id="resultado"></h2>
+  </div>
+
+  <div>
+    <a href="index.html">Volver</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba 2 UD2</title>
+</head>
+<body>
+  <p>Por favor, introduce una opción:</p>
+
+  <ol>
+    <li>Listar usuarios.</ul>
+    <li>Calcular edad media.</li>
+    <li>Contar usuari@s casad@s.</li>
+    <li>Calcular edad media de usuari@s casad@s y solter@s.</li>
+  </ol>
+
+  <input id="num">
+  <button onclick="calcular()">Calcular</button>
+
+  <br><br>
+
+  <p id="parrafo"></p>
+
+
+    <script>
+
+        let usuarios = [
+
+            { nombre: "Juan",
+              apellidos: "Pérez Pérez",
+              edad: 20,
+              casado: true
+            },
+
+            { nombre: "Laura",
+              apellidos: "López López",
+              edad: 21,
+              casado: false
+            },
+
+            { nombre: "Ana",
+              apellidos: "Sánchez Sánchez",
+              edad: 24,
+              casado: true
+            },
+
+            { nombre: "Miguel",
+              apellidos: "Fernández Fernández",
+              edad: 26,
+              casado: false
+            },
+
+            { nombre: "Lola",
+              apellidos: "García García",
+              edad: 20,
+              casado: true
+            },
+
+            { nombre: "Francisco",
+              apellidos: "Jiménez Jiménez",
+              edad: 15,
+              casado: false
+            }
+
+        ];
+
+        function calcular(){
+          let numero = document.getElementById("num").value;
+
+          if (numero > 0 && numero < 6) {
+
+
+          if (numero == 1) {
+              for (indice in usuarios) {
+              let valor = parseInt(indice) + 1
+              document.getElementById("parrafo").innerHTML += `Los datos del usuario ${valor} son: <br>`
+              document.getElementById("parrafo").innerHTML += "nombre: " + usuarios[indice].nombre + "<br>";
+              document.getElementById("parrafo").innerHTML += "apellido: " + usuarios[indice].apellidos + "<br>";
+              document.getElementById("parrafo").innerHTML += "edad: " + usuarios[indice].edad + "<br>";
+              document.getElementById("parrafo").innerHTML += "casado " + usuarios[indice].casado + "<br><br>";
+              }
+          }
+
+          if (numero == 2) {
+            let edad = 0;
+            let personas = 0;
+            for (let indice of usuarios) {
+              edad += indice.edad;
+              personas += 1;
+              resultado = edad / personas;
+              document.getElementById("parrafo").innerHTML = resultado;
+              
+            }
+          }
+
+          
+          if (numero == 3) {
+            let casados = 0;
+            let solteros = 0;
+            for (let indice of usuarios) {
+              if (indice.casado == true) {
+                casados += 1
+              }
+              document.getElementById("parrafo").innerHTML = "El número de usuarios casad@s es " + casados;
+ 
+            }
+          }
+          }
+        } else {
+          document.getElementById("parrafo").innerHTML = "Números incorrectos"
+        }
+
+
+    </script>
+
+</body>
+</html>

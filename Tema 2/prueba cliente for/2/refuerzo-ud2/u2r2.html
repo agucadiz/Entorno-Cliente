@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    /*
+      2. Los grupos musicales reciben un nombre en función del número de componentes.
+      Realiza una serie de sentencias condicionales que:
+      - muestre "not  a  group" si musicians es menor o igual que O
+      - muestre "solo"  si rnusicians es igual 1
+      - muestre "duet" si rnusicians es igual a 2
+      - muestre "trio" si rnusicians es igual a 3
+      - muestre "quartet" si rnusicians es igual a 4
+      - muestre "thes  es  a  large  group" si rnusicians es mayor que 4
+    */
+
+    function grupoMusical(musicians) {
+      let resultado = document.getElementById('resultado');
+      let respuesta = 'Se trata de un ';
+      if (musicians > 0) {
+        if (musicians == 1) {
+          respuesta += 'solo.';
+        } else if (musicians == 2) {
+          respuesta += 'dueto.';
+        } else if (musicians == 3) {
+          respuesta += 'trio.';
+        } else if (musicians == 4) {
+          respuesta += 'cuarteto.';
+        } else if (musicians > 4) {
+          respuesta += `un grupo de ${musicians} integrantes.`;
+        }
+      } else {
+        respuesta ='Esto no es un grupo.';
+      }
+      resultado.innerHTML = respuesta;
+    }
+
+    function grupoMusicalTernario() {
+      let resultado = document.getElementById('resultado');
+      let respuesta = 'Se trata de un ';
+
+      musicians >= 0 ?
+        musicians == 1 ? respuesta += 'solo.'
+        : musicians == 2 ? respuesta += 'dueto.'
+        : musicians == 3 ? respuesta += 'trio.'
+        : musicians == 4 ? respuesta += 'cuarteto.'
+        : musicians > 4 ? respuesta += `un grupo de ${musicians} componentes.` : null
+      : respuesta = 'Esto no es un grupo.';
+
+      resultado.innerHTML = respuesta;
+    }
+  </script>
+  <title>u2r2</title>
+</head>
+<body>
+  <h1>2. Grupo Musical</h1>
+  <div>
+    <h2 id="resultado"></h2>
+    <script>
+      let componentes = prompt('Introduce el número de componentes:', '5');
+      grupoMusical(componentes);
+    </script>
+  </div>
+  <div>
+    <a href="index.html">Volver</a>
+  </div>
+</body>
+</html>

@@ -14,7 +14,7 @@
 
         <p id="parrafo"></p>
 
-        <iframe id="fr1" src="https://html.spec.whatwg.org/multipage/window-object.html" width="40%" height="150"></iframe>
+        <iframe id="fr1" src="'./objetoWindow_plantilla.html'" width="40%" height="150"></iframe>
         <iframe src="https://wikipedia.com" width="40%" height="150"></iframe>
 
         <p id="ifr"></p>
@@ -43,7 +43,7 @@
             function objWindow() { 
 
                 let cadena ="";
-                window.name = "Mi ventana";
+                window.name = "Mi ventana2";
 
                 cadena += "Información <br> Nombre: " + window.name;
 
@@ -89,8 +89,7 @@
             function crearVentana(){
                ventanaNueva = window.open("about:blank", "_self"); //_blank, 
             }
-            
-            ventanaNueva.document.write("<head>")
+
             function cerrarVentana(){
               
             }

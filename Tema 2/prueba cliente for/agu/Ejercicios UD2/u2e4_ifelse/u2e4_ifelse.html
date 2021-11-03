@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO: u2e4_ifelse</title>
+    <script>
+        let mensaje; 
+        const edad = prompt("Introduce tu edad:") 
+
+        if (edad >= 0 && edad <= 12) {
+            mensaje = "Niño";
+            alert(mensaje);
+        } else if (edad >= 13 && edad <= 26) {
+            mensaje = "Joven";
+            alert(mensaje);
+        } else if (edad > 26 && edad <= 60) {
+            mensaje = "Adulto";
+            alert(mensaje);
+        } else if (edad > 60) {
+            mensaje = "Jubilado";
+            alert(mensaje);
+        } else {
+            mensaje = 'Has introducido un número incorrecto.'
+            alert(mensaje)
+        }
+    </script>
+</head>
+
+<body>
+    <h1>EJERCICIO: u2e4_ifelse</h1>
+    <!--Crea un programa que pida al usuario que introduzca una edad.-->
+</body>
+
+</html>

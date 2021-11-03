@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO: u2e8_while2</title>
+</head>
+<body>
+    <script>
+        let nombre;
+        nombre = prompt("¿Cuál fue el primer presidente de la democracia española?").toLowerCase();
+
+        while(nombre != "adolfo suarez"){
+
+            const comprobar = nombre.split(" ");
+            if (comprobar.length == 1 && comprobar == "adolfo"){
+                nombre = prompt("Te falta el apellido. ¿Cuál fue el primer presidente de la democracia española?").toLowerCase();
+            }
+            if (comprobar.length == 1 && comprobar == "suarez"){
+                nombre = prompt("Te falta el nombre. ¿Cuál fue el primer presidente de la democracia española?").toLowerCase();
+            }
+            if (nombre == ""){
+                nombre = prompt("No ha introducido ningún dato. ¿Cuál fue el primer presidente de la democracia española?").toLowerCase(); 
+            }
+            if (nombre != "adolfo" && nombre != "suarez" && nombre != "adolfo suarez" && nombre != ""){
+                nombre = prompt("ERROR. Inténtelo de nuevo. ¿Cuál fue el primer presidente de la democracia española?").toLowerCase();
+            }
+        }
+        </script>
+
+<header>
+        <h1>EJERCICIO: u2e8_while2</h1>
+        <!--Modifica el ejercicio anterior de la siguiente forma:
+
+            * En primer lugar, se carga un prompt donde pregunta: “¿Cuál fue el primer presidente de la democracia española?”
+            * En caso de que el usuario introduzca mal nombre y apellido, muestre como mensaje: 
+              “ERROR. Inténtelo de nuevo. ¿Cuál fue el primer presidente de la democracia española?”
+            * En caso de que el usuario introduzca el nombre del presidente (solamente) el prompt muestre 
+              como mensaje “Te falta el apellido. ¿Cuál fue el primer presidente de la democracia española?”.
+            * En caso de que el usuario introduzca el apellido del presidente (solamente) el prompt muestre como mensaje 
+              “Te falta el nombre. ¿Cuál fue el primer presidente de la democracia española?”.-->
+    </header>
+
+</body>
+</html>
