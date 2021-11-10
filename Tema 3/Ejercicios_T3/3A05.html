@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <!--
+    Ejercicio 3A05
+    Muestra los meses, días y años que tienes, haciendo uso de los métodos del objeto Date
+  -->
+
+  <p id="parrafo"></p>
+  <script>
+
+    let actual = new Date();
+    let nacimiento = new Date("1982, 10, 25"); //Con comillas son los meses correctos, sin ellas un mes menos.
+
+    let dia = Math.abs((actual.getDate() - nacimiento.getDate()));
+    let mes = Math.abs((actual.getMonth() - nacimiento.getMonth()));
+    let anyo = (actual.getFullYear() - nacimiento.getFullYear());
+
+    alert("Mi edad es de " + anyo + " años, " + mes + " meses y " + dia + " días ")
+
+  </script>
+
+</body>
+
+</html>

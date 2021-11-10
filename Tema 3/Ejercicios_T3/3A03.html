@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3A03</title>
+</head>
+
+<body>
+
+    <!--
+        Solicita el ingreso de la coordenada de un punto. El formato a ingresar 
+        por teclado es:
+        ●  (999,999)
+        ●  Los números pueden tener entre 1 y 3 dígitos.
+        Usa el método test( )
+    -->
+
+    <form action="">
+        <label for="coordenada">Introduzca una coordenada</label>
+        <input id="coordenada" placeholder="Ej: (999,999) ">
+
+        <button type="button" id="button">comprobar</button>
+    </form>
+
+    <p>El resultado de la validación es: <span id="resultado"></span></p>
+
+    <p id="parrafo1"></p>
+    <p id="parrafo2"></p>
+
+    <script>
+
+        document.getElementById("button").onclick = comprobar;
+
+        function mostrar(coord) {
+            document.getElementById("parrafo1").innerHTML = coord;
+            document.getElementById("parrafo2").innerHTML =
+                "Las coordenadas son correctas.";
+        }
+
+        function comprobar() {
+            var coord = document.getElementById("coordenada").value;
+            var patt = /^\(\d{1,3}\,\d{1,3}\)$/;
+            var res = patt.test(coord);
+
+            document.getElementById("resultado").innerHTML = res;
+
+            if (res) {
+                mostrar(coord);
+                document.getElementById("coordenada").value = "";
+            } else {
+                alert("Introduzca una coordenada correcta");
+                document.getElementById("coordenada").value = "";
+                document.getElementById("parrafo1").innerHTML = "";
+                document.getElementById("parrafo2").innerHTML = "";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <!--
+    Realiza un script en el que un usuario introduzca una frase (esta pueda contener todo 
+    tipo de caracteres), ir mostrando todos los caracteres uno a uno, excepto si es un 
+    número que lo obviará. Usa el método charAt( )
+  -->
+
+  <script>
+    let frase = prompt("Introduce una frase:");
+
+    for (let i = 0; i < frase.length; i++) {
+      if (isNaN(frase.charAt(i))) {
+        document.write(frase.charAt(i));
+      }
+    }
+
+    document.write("<br>");
+  </script>
+</body>
+
+</html>

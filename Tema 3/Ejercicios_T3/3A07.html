@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+        Ejercicio 3A07 
+        ●Recorre todos las propiedades y métodos del objeto Navigator.
+        ●Muéstralos en una página web. 
+        ●Si la propiedad es “plugins” comprueba y recorre  también todos los elementos 
+        que la componen.
+    -->
+
+    <p id="parrafo"></p>
+
+    <script>
+        let salida = '<ol>';
+    
+        for (const key in navigator) {
+            salida += `<li> ${key}: ${navigator[key]} </li>`;
+            if (key == "plugins") {
+                
+                let objPlugin = navigator[key];
+                for (const clave in objPlugin) {
+                    salida += `<ul> ${clave}: ${objPlugin[clave]} </ul>`;
+                }
+            }
+
+        }
+        salida += '</ol>';
+        document.getElementById("parrafo").innerHTML = salida;
+
+    </script>
+
+</body>
+
+</html>
